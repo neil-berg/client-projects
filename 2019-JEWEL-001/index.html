@@ -14,50 +14,74 @@
   <div class="wrapper">
     
     <div class="landing">
-      <img class="logo" src="/images/logo-colored-flat.png" alt="Jewel Logo">
+      <img class="landing__logo" src="/images/logo-colored-flat.png" alt="Jewel Logo">
     </div>
 
     <section class="info">
-      <p class="hours">MON - FRI 8AM - 4:30PM / SAT + SUN 9AM - 4:40PM</p>
-      <p class="address">654 N Hoover St., Los Angeles, CA 90004</p>
-      <p class="number-email">323.522.6927 / <a href="mailto:info@jewel-la.com">info@jewel-la.com</a></p>
+      <p class="info__hours">Monday - Friday 8am - 4:30pm</p>
+      <p class="info__hours">Saturday + Sunday 9am - 4:40pm</p>
+      <p class="info__address">654 N Hoover St., Los Angeles, CA 90004</p>
+      <p class="info__number-email">323.522.6927 / <a href="mailto:info@jewel-la.com">info@jewel-la.com</a></p>
+      <a href="https://www.instagram.com/eatatjewel/" class="info__social"><i class="fab fa-instagram"></i></a>
+      <span class="divider"></span>
     </section>
 
     <section class="about">
       <h2 class="about__header">About</h2>
-      <p class="about__text">Jewel is a plant-based restaurant&mdash;not specifically vegan, vegetariant, or gluten-free&mdash;although many of our offerings do fit the bill</p>
+      <p class="about__text"><span class="highlight">Jewel</span> is a plant-based restaurant&mdash;not specifically vegan, vegetariant, or gluten-free&mdash;although many of our offerings do fit the bill</p>
+      <p class="about__text">Our food is inspired by the bounty of produce in southern California and features luscious salads, colorful burgers, mind-blowing pizza, warming bowls of pasta, and dynamic grain bowls with lacto-fermented veggies and bright pickles. The menu is inclusive of organic free range eggs to offer a healthy range of options.</p>
     </section>
 
-    <div class="sign">
-      <img src="/images/outside-sign.jpg" alt="Outside chalkboard sign of Jewel" class="outdoor-sign">
-    </div>
-
+    
     <section class="gallery">
-      <img src="/images/menu-item-1.jpg" alt="panakes">
-      <img src="/images/menu-item-2.jpg" alt="tacos">
-      <img src="/images/menu-item-3.jpg" alt="salad">
-      <img src="/images/menu-item-4.jpg" alt="drink">
+      <img class="gallery__img" src="/images/menu-item-1.jpg" alt="panakes">
+      <img class="gallery__img" src="/images/menu-item-2.jpg" alt="tacos">
+      <img class="gallery__img" src="/images/menu-item-3.jpg" alt="salad">
+      <img class="gallery__img" src="/images/menu-item-4.jpg" alt="drink">
     </section>
-
+    
     <section class="food-drink">
       <h2 class="food-drink__header">Food + Drink</h2>
-      <p class="food-drink__text">Our food is inspired by the bounty of produce in southern California and features luscious salads, colorful burgers, mind-blowing pizza, warming bowls of pasta, and dynamic grain bowls with lacto-fermented veggies and bright pickles. The menu is inclusive of organic free range effs to offer a healthy range of options</p>
-      <p class="foot-drink__text">Our menu is glutten-free, egg-free, and dairy-free, except where noted.</p>
-      <p class="foot-drink__text">With the exception of eggs, our menu is free from all dairy and animal products.</p>
-      <p class="foot-drink__text">We use local, organic, and sustainable produce whenever possible.</p>
+      <p class="foot-drink__text">Our menu is glutten-free, egg-free, and dairy-free, except where noted. With the exception of eggs, our menu is free from all dairy and animal products. We use local, organic, and sustainable produce whenever possible.</p>
     </section>
-
-    <section class="menu">
-      <!-- TO DO: HTML for breakfast, lunch, and beverages -->
-    </section>
-
-    <section class="chef">
-      <h2 class="chef__header">Our Team</h2>
     
-    </section><section class="sharkey">
+    <section class="menu">
+      <ul class="nav">
+        <li class="nav__item">
+          <a class="nav__link clicked" href="#">Breakfast</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Lunch</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Beverages</a>
+        </li>
+      </ul>
+      <div class="menu__legend">
+        <p class="legend__item">(g) contains gluten</p>
+        <p class="legend__item">(n/v) not vegan</p>
+        <p class="legend__item">(r/o) raw option</p>
+        <p class="legend__item">(r) raw</p>
+      </div>
+      <div class="menu__group breakfast">
+      </div>
+      <div class="menu__group lunch">
+      </div>
+      <div class="menu__group beverages">
+      </div>
+    </section>
+    
+    <section class="team">
+      <h2 class="team__header">Our Team</h2>
+      <img class="team__img" src="/images/chef.jpg" alt="">
+      <img class="team__img" src="images/team.png" alt="">
+      <img class="team__img" src="/images/outside-sign.jpg" alt="Outside chalkboard sign of Jewel" class="outdoor-sign">
+    </section>
 
-    <footer class="footer">site by <a class="signature" href="https://neil-berg.com" target="_blank">neil berg</a></footer>
-
-  </div>
-</body>
+    <div class="footer">site by <a class="signature" href="https://neil-berg.com" target="_blank">neil berg</a>
+    </div>
+    
+      
+    </div>
+  </body>
 </html>
