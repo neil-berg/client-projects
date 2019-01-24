@@ -93,6 +93,7 @@ img {
   width: 75%;
   background: var(--dark-purple);
   min-height: 1px;
+  grid-column: span 2;
 }
 
 .about {
@@ -114,6 +115,7 @@ img {
 .gallery {
   grid-area: gallery;
   display: grid;
+  grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
@@ -128,49 +130,105 @@ img {
   grid-area: menu;
   width: 90vw;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
 }
 
-.menu .nav {
+.nav {
   list-style: none;
   padding: 0;
-  margin: 0;
-  grid-column: span 2;
+  margin: 0 0 15px 0;
+  /* grid-column: span 2; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nav .nav__item {
+.nav__item {
   text-align: center;
   margin: 0 10px;
 }
 
-.nav .nav__link {
+.nav__link {
+  font-size: 18px;
   text-decoration: none;
+  color: black;
+  font-weight: 400;
+}
+
+.nav__link.clicked {
+  border-bottom: 2px var(--light-purple) solid;
   color: var(--light-purple);
-  font-weight: 400;
 }
 
-.menu .menu__legend {
-  grid-column: span 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* border: 1px solid red; */
-  margin-top: 10px;
-}
-
-.legend__item {
+.menu__legend {
   font-size: 12px;
-  font-weight: 400;
+  font-weight: bold;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
-.legend__item:nth-child(1), .legend__item:nth-child(3) {
-  text-align: right;
-  padding-right: 10px;
+.menu__group {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  font-size: 12px;
+  opacity: 0;
+  /* position: absolute;
+  top: 20; */
+}
+
+.menu__group.reveal {
+  opacity: 1;
+  transition: opacity ease-in 0.3s;
+}
+
+.menu__item {
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  grid-template-areas: "heading ."
+                      "name price"
+                      "ingr ingr";
+}
+
+.menu__item > p {
+  margin: 0;
+}
+
+.menu__item .heading {
+  grid-area: heading;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.menu__item .name {
+  grid-area: name;
+  font-weight: bold;
+}
+
+.menu__item .price {
+  grid-area: price;
+  font-weight: bold;
+}
+
+.menu__item .ingr {
+  grid-area: ingr;
+}
+
+.menu__addon {
+  display: grid;
+  grid-template-columns: 1fr 30px;
+}
+
+.menu__addon > p {
+  margin: 0;
+}
+
+.menu__addon .bold {
+  font-weight: bold;
 }
 
 .team {
