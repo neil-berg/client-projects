@@ -12,12 +12,13 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
-  /* font-family: 'Poiret One', cursive; */
   font-weight: 200;
+  background: var(--bg-color);
 }
 
 h2 {
   font-family: 'Poiret One', cursive;
+  text-align: center;
 }
 
 img {
@@ -25,33 +26,157 @@ img {
   margin: auto;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70vh repeat(7, auto);
+  grid-template-areas: "landing"
+  "info"
+  "about"
+  "gallery"
+  "food-drink"
+  "menu"
+  "team"
+  "footer";
+}
+
 .landing {
+  grid-area: landing;
   background-image: url("/images/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  /* height: 100vh; */
   /* display: grid;
   justify-content: start;
   align-content: start; */
 }
 
-.landing .logo {
-  max-width: 50vw;
+.landing__logo {
+  width: 65vw;
   margin: 20px 0 0 20px;
 }
 
-.wrapper {
+.info {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info p, a {
+  font-size: 16px;
+  margin: 0;
+  padding: 5px;
+}
+
+.info a {
+  color: var(--light-purple);
+  text-decoration: none;
+}
+
+.info__hours, info__address {
+  font-variant: small-caps;
+}
+
+.info p:first-child {
+  margin-top: 10px;
+}
+
+.fab.fa-instagram {
+  font-size: 28px;
+  color: black;
+}
+
+.divider {
+  margin: 10px auto;
+  width: 75%;
+  background: var(--dark-purple);
+  min-height: 1px;
+}
+
+.about {
+  grid-area: about;
+  margin: 0 auto;
+  padding: 5px;
+  width: 90vw;
+}
+
+.about .highlight {
+  color: var(--light-purple);
+  font-weight: 400;
+}
+
+.sign {
+  grid-area: sign;
+}
+
+.gallery {
+  grid-area: gallery;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 70vh, 30vh, 60vh, 40vh, 50vh, auto, auto, 100vh, 100vh, auto;
-  grid-template-areas: "landing"
-                      "info"
-                      "about"
-                      "sign"
-                      "gallery"
-                      "food-drink"
-                      "menu"
-                      "chef"
-                      "sharkey"
-                      "footer";
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.food-drink {
+  grid-area: food-drink;
+  margin: 0 auto;
+  width: 90vw;
+  padding: 5px;
+}
+
+.menu {
+  grid-area: menu;
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.menu .nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav .nav__item {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.nav .nav__link {
+  text-decoration: none;
+  color: var(--light-purple);
+  font-weight: 400;
+}
+
+.menu .menu__legend {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* border: 1px solid red; */
+  margin-top: 10px;
+}
+
+.legend__item {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.legend__item:nth-child(1), .legend__item:nth-child(3) {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.team {
+  grid-area: team;
+}
+
+.footer {
+  grid-area: footer;
 }
