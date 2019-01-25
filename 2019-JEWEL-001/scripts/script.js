@@ -5,11 +5,8 @@ const menuGroups = document.querySelectorAll('.menu__group');
 function menuSwitch(e) {
   e.preventDefault();
   const targetItem = e.target.innerText.toLowerCase();
-  console.log(targetItem);
   
-  navLinks.forEach(link => {
-    console.log(link.classList);
-    
+  navLinks.forEach(link => {    
     if (link.classList.contains(targetItem)) {
       link.classList.add('clicked')
     } else {
@@ -17,7 +14,6 @@ function menuSwitch(e) {
     }
   });
   
-  // Reveal the menu
   menuGroups.forEach(group => {
     if (group.classList.contains(targetItem)) {
       group.classList.add('reveal');
