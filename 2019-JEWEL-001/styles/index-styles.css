@@ -19,11 +19,26 @@ html, body {
 h2 {
   font-family: 'Poiret One', cursive;
   text-align: center;
+  margin-top: 0;
 }
 
 img {
   width: 100%;
-  margin: auto;
+  max-width: 400px;
+  /* margin: 0 auto;
+  max-width: 300px; */
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.divider {
+  margin: 20px auto;
+  height: 1px;
+  min-height: 1px;
+  width: 75%;
+  background: var(--dark-purple);
 }
 
 .wrapper {
@@ -88,19 +103,15 @@ img {
   color: black;
 }
 
-.divider {
-  margin: 10px auto;
-  width: 75%;
-  background: var(--dark-purple);
-  min-height: 1px;
-  grid-column: span 2;
-}
-
 .about {
   grid-area: about;
   margin: 0 auto;
   padding: 5px;
-  width: 90vw;
+  max-width: 850px;
+}
+
+.about p {
+  margin: 0 20px 20px 20px;
 }
 
 .about .highlight {
@@ -122,8 +133,16 @@ img {
 .food-drink {
   grid-area: food-drink;
   margin: 0 auto;
-  width: 90vw;
+  max-width: 850px;
   padding: 5px;
+}
+
+.food-drink p {
+  margin: 0 20px 20px 20px;
+}
+
+.food-drink h2 {
+  margin-top: 20px;
 }
 
 .menu {
@@ -173,9 +192,6 @@ img {
   margin: 5px;
 }
 
-.menu__legend .bold {
-  font-weight: bold;
-}
 
 .menu__group {
   display: grid;
@@ -240,10 +256,67 @@ img {
   font-weight: bold;
 }
 
+p.juice-text, p.booch-text {
+  margin: 0;
+}
+
 .team {
   grid-area: team;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team__container {
+  position: relative;
+}
+
+.team__text.chef {
+  position: absolute;
+  top: 10px;
+  width: 40%;
+  font-weight: bold;
+  margin-left: 10px;
+  /* opacity: 0; */
+}
+
+.team__text.sharky {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  margin: 5px 10px 0 0;
+  text-align: right;
+  color: white;
+  /* opacity: 0; */
+}
+
+.team__text.chef.show {
+  opacity: 1;
+  transition: opacity linear 0.3s;
 }
 
 .footer {
   grid-area: footer;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__text {
+  position: absolute;
+  bottom: 5px;
+  font-size: 16px;
+  /* font-weight: bold; */
+  letter-spacing: 1px;
+}
+.footer__text {
+  text-decoration: none;
+  color: white;
 }
