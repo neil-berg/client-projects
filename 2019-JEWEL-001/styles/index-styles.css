@@ -128,20 +128,21 @@ img {
 
 .menu {
   grid-area: menu;
-  width: 90vw;
+  max-width: 450px;
   margin: 0 auto;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
 }
 
 .nav {
   list-style: none;
-  padding: 0;
-  margin: 0 0 15px 0;
-  /* grid-column: span 2; */
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  /* position: sticky;
+  top: 0;
+  background: var(--bg-color);
+  padding: 20px 0; */
 }
 
 .nav__item {
@@ -164,10 +165,16 @@ img {
 
 .menu__legend {
   font-size: 12px;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
+  margin: 20px;
   text-align: center;
+}
+
+.menu__legend p {
+  margin: 5px;
+}
+
+.menu__legend .bold {
+  font-weight: bold;
 }
 
 .menu__group {
@@ -176,30 +183,30 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   font-size: 12px;
   display: none;
+  margin: 0 20px;
 }
 
 .menu__group.reveal {
   display: block;
 }
 
+.menu .menu__heading {
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 18px;
+  margin: 10px 0 5px 0;
+}
+
 .menu__item {
   display: grid;
   grid-template-columns: 1fr 30px;
-  grid-template-areas: "heading ."
-                      "name price"
+  grid-template-areas: "name price"
                       "ingr ingr";
+  margin: 5px 0 0 0;
 }
 
 .menu__item > p {
   margin: 0;
-}
-
-.menu__item .heading {
-  grid-area: heading;
-  font-weight: bold;
-  font-variant: small-caps;
-  font-size: 18px;
-  margin-bottom: 5px;
 }
 
 .menu__item .name {
@@ -220,23 +227,7 @@ img {
 .menu__addon {
   display: grid;
   grid-template-columns: 1fr 30px;
-  margin-bottom: 5px;
-}
-
-.menu__sides {
-  display: grid;
-  grid-template-columns: 1fr 30px;
-}
-
-.menu__sides p.heading {
-  font-size: 18px;
-  font-variant: small-caps;
-}
-
-.menu__sides > p {
-  margin: 0;
-  font-weight: bold;
-  font-variant: capitalize;
+  margin: 0 0 0 10px;
 }
 
 .menu__addon > p {
