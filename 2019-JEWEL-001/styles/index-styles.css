@@ -8,7 +8,11 @@
   --light-purple: #8d2a6b;
 }
 
-html, body {
+html {
+  font-size: 16px;
+}
+
+body {
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
@@ -37,7 +41,7 @@ img {
   margin: 20px auto;
   height: 1px;
   min-height: 1px;
-  width: 75%;
+  width: 300px;
   background: var(--dark-purple);
 }
 
@@ -51,8 +55,7 @@ img {
   "gallery"
   "food-drink"
   "menu"
-  "team"
-  "footer";
+  "team";
 }
 
 .landing {
@@ -60,10 +63,6 @@ img {
   background-image: url("/images/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  /* height: 100vh; */
-  /* display: grid;
-  justify-content: start;
-  align-content: start; */
 }
 
 .landing__logo {
@@ -80,7 +79,7 @@ img {
 }
 
 .info p, a {
-  font-size: 16px;
+  /* font-size: 16px; */
   margin: 0;
   padding: 5px;
 }
@@ -127,7 +126,9 @@ img {
   grid-area: gallery;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  align-items: center;
 }
 
 .food-drink {
@@ -147,7 +148,7 @@ img {
 
 .menu {
   grid-area: menu;
-  max-width: 450px;
+  max-width: 550px;
   margin: 0 auto;
 }
 
@@ -170,7 +171,7 @@ img {
 }
 
 .nav__link {
-  font-size: 18px;
+  /* font-size: 18px; */
   text-decoration: none;
   color: black;
   font-weight: 400;
@@ -183,7 +184,7 @@ img {
 }
 
 .menu__legend {
-  font-size: 12px;
+  /* font-size: 12px; */
   margin: 20px;
   text-align: center;
 }
@@ -192,12 +193,11 @@ img {
   margin: 5px;
 }
 
-
 .menu__group {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  font-size: 12px;
+  /* font-size: 12px; */
   display: none;
   margin: 0 20px;
 }
@@ -209,7 +209,7 @@ img {
 .menu .menu__heading {
   font-weight: bold;
   font-variant: small-caps;
-  font-size: 18px;
+  /* font-size: 18px; */
   margin: 10px 0 5px 0;
 }
 
@@ -262,6 +262,9 @@ p.juice-text, p.booch-text {
 
 .team {
   grid-area: team;
+}
+
+.image-grid {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -273,11 +276,10 @@ p.juice-text, p.booch-text {
 
 .team__text.chef {
   position: absolute;
-  top: 10px;
+  top: 0;
   width: 40%;
   font-weight: bold;
   margin-left: 10px;
-  /* opacity: 0; */
 }
 
 .team__text.sharky {
@@ -288,35 +290,51 @@ p.juice-text, p.booch-text {
   margin: 5px 10px 0 0;
   text-align: right;
   color: white;
-  /* opacity: 0; */
 }
 
-.team__text.chef.show {
-  opacity: 1;
-  transition: opacity linear 0.3s;
-}
-
-.footer {
-  grid-area: footer;
-  margin: 0;
-  padding: 0;
-}
-
-.footer__container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer__text {
+.team__text.sign {
   position: absolute;
   bottom: 5px;
-  font-size: 16px;
-  /* font-weight: bold; */
-  letter-spacing: 1px;
-}
-.footer__text {
-  text-decoration: none;
+  left: 0;
   color: white;
+  text-decoration: none;
+  /* font-size: 16px; */
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Small screens */
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+
+  .menu__legend, .menu__group {
+    font-size: 12px;
+  }
+}
+
+/* Medium screens */
+@media screen and (min-width: 640px) {
+
+  .menu__legend, .menu__group {
+    font-size: 14px;
+  }
+
+  .team__text.chef, .team__text.sharky, .team__text.sign {
+    font-size: 18px;
+  }
+
+}
+
+/* Large screens */
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+  .menu__legend, .menu__group {
+    font-size: 16px;
+  }
 }
