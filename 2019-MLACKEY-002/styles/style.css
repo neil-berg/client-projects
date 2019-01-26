@@ -1,7 +1,7 @@
 :root {
   --red: #E62020;
   --black: #140101;
-  --white: #f7f7f7;
+  --white: #fff9f1;
 }
 
 *, *:before, *:after {
@@ -10,6 +10,7 @@
 
 html {
   font-size: 16px;
+  font-family: 'Coda', cursive;
 }
 
 body {
@@ -29,26 +30,59 @@ body {
 .landing {
   /* grid-area: landing; */
   display: grid;
-  grid-template-columns: 100px 1fr;
-  margin: 10px;
+  grid-template-columns: 50px 1fr;
+  margin: 0.5em;
+  margin-bottom: 0;
 }
 
 .landing__gallery {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 0.5em;
   grid-template-columns: 1fr;
-  margin-right: 10px;
 }
 
 .landing__gallery img {
-  width: 100px;
-  filter: grayscale(65%);
+  width: 50px;
+  filter: grayscale(100%);
+  /* filter: sepia(100%); */
   background: var(--black);
 }
 
 .landing__hero {
   grid-row: span 8;
   background: var(--red);
-  margin-left: 10px;
-  z-index: 1;
+  margin-left: 0.5em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.landing__hero p {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin-top: 0.5em;
+  font-size: 1.25em;
+}
+
+.landing__hero .first-name, 
+.landing__hero .last-name {
+  color: var(--white);
+}
+
+.movie {
+  color: var(--white);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.movie__title {
+  margin: 0;
+  padding: 0;
+  font-size: 3em;
+}
+
+.movie__premier {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
 }
