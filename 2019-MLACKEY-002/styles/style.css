@@ -53,7 +53,9 @@ body {
   background: var(--red);
   margin-left: 0.5em;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr repeat(4, auto) 1fr;
+  grid-template-areas: ". first-name . chinese-1 chinese-2 ."
+                      ". chinese-3 last-name chinese-4 chinese-5 ."
 }
 
 .landing__hero p {
@@ -61,12 +63,42 @@ body {
   text-orientation: upright;
   margin-top: 0.5em;
   font-size: 1.25em;
+  padding: 0;
 }
 
 .landing__hero .first-name, 
 .landing__hero .last-name {
   color: var(--white);
 }
+
+.landing__hero .first-name {
+  grid-area: first-name;
+  align-self: end;
+}
+.landing__hero .last-name {
+  grid-area: last-name;
+}
+.landing__hero .chinese-1 {
+  grid-area: chinese-1;
+  align-self: end;
+}
+.landing__hero .chinese-2 {
+  grid-area: chinese-2;
+}
+.landing__hero .chinese-3 {
+  grid-area: chinese-3;
+  align-self: center;
+}
+.landing__hero .chinese-4 {
+  grid-area: chinese-4;
+  align-self: end;
+}
+.landing__hero .chinese-5 {
+  grid-area: chinese-5;
+  align-self: start;
+}
+
+
 
 .movie {
   color: var(--white);
