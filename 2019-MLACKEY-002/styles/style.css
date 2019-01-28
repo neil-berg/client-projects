@@ -4,13 +4,14 @@
   --white: #fff9f1;
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
 html {
+  box-sizing: border-box;
   font-size: 16px;
   font-family: 'Coda', cursive;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -124,24 +125,24 @@ body {
 
 .movie__title {
   text-align: left;
-  margin: 0 0 0 0.5rem;
+  margin: 0 0.5rem 0 0.5rem;
   padding: 0;
   font-size: 3em;
   color: var(--red);
+  /* border: 1px solid red; */
 }
 
-.sundace {
+.sundance {
   grid-area: sundance;
   padding: 0;
 }
 
 .sundance__text {
-  margin: 0 0 1rem 0.5rem;
+  margin: 0 0.5rem;
   padding: 0;
   font-size: 1.5em;
   text-align: left;
   color: var(--red);
-
 }
 
 .vision {
@@ -160,9 +161,14 @@ body {
   text-orientation: upright;
   text-transform: uppercase;
   margin: 0;
+  margin-top: 0.2em;
   padding: 0;
   padding-right: 0.25rem;
   border-right: 1px solid var(--red);
+}
+
+.past-work__header {
+  margin-top: 0.33em;
 }
 
 .vision__text, 
@@ -188,6 +194,64 @@ body {
   margin: 0.5em 0.5rem 2rem 0.5rem;
 }
 
+.past-work__header {
+  grid-row: span 3;
+}
+
+.past-work__item {
+  grid-column: 2 / 3;
+}
+
+.past-work__item .item__header {
+  margin: 0;
+  font-size: 1.5em;
+  color: var(--red);
+}
+
+.past-work__item .item__specs {
+  margin: 0;
+}
+
+.past-work__item .item__image {
+  margin: 0;
+}
+
+.past-work__item .item__text {
+  margin: 0;
+  font-size: 0.85em;
+}
+
+.past-work__item a {
+  text-decoration: none;
+  color: var(--red);
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: 0.85em;
+}
+
+.past-work__item img {
+  width: 100%;
+  height: 150px;
+}
+
+.footer {
+  grid-area: footer;
+  margin: 0.5rem 0.5rem 0 0.5rem;
+  text-align: center;
+}
+
+.footer .email {
+  display: block;
+  text-decoration: none;
+  color: var(--red);
+}
+
+.footer i {
+  color: var(--red);
+  font-size: 1.5em;
+  margin: 0.25em;
+}
 
 @media screen and (min-width: 640px) {
 
