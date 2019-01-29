@@ -20,6 +20,10 @@ body {
   background: var(--white);
 }
 
+/* 
+Overall site wrapper 
+Mobile-first design with single column
+*/
 .wrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -32,7 +36,7 @@ body {
                       "footer";
 }
 
-/* Landing page */
+/* Landing section */
 .landing {
   grid-area: landing;
   display: grid;
@@ -40,6 +44,7 @@ body {
   margin: 0.5rem 0.5rem 0 0.5rem;
 }
 
+/* Vertical image gallery in landing */
 .landing__gallery {
   display: grid;
   grid-gap: 0.5rem;
@@ -53,13 +58,14 @@ body {
   background: var(--black);
 }
 
+/* Big red hero space in landing */
 .landing__hero {
   grid-row: span 8;
   background: var(--red);
   margin-left: 0.5em;
   display: grid;
   grid-gap: 1em;
-  grid-template-columns: 20px repeat(4, auto) 1fr;
+  grid-template-columns: 1fr repeat(4, auto) 1fr;
   grid-template-areas: ". first-name . chinese-1 chinese-2 ."
                       ". chinese-3 last-name chinese-4 chinese-5 ."
 }
@@ -117,6 +123,7 @@ body {
   display: none;
 } */
 
+/* Showcase movie title */
 .movie {
   grid-area: movie;
   margin: 0;
@@ -124,8 +131,8 @@ body {
 }
 
 .movie__title {
-  text-align: left;
-  margin: 0 0.5rem 0 0.5rem;
+  text-align: center;
+  margin: 0 auto;
   padding: 0;
   font-size: 3em;
   color: var(--red);
@@ -138,9 +145,9 @@ body {
 }
 
 .sundance__text {
-  margin: 0 0 1rem 0.5rem;
+  margin: 0 auto 1em auto;
   font-size: 1.45em;
-  text-align: left;
+  text-align: center;
   color: var(--red);
 }
 
@@ -149,16 +156,16 @@ body {
   text-transform: uppercase;
 }
 
+/* Artist vision */
 .vision {
   grid-area: vision;
   margin: 0 auto 2em auto;
-  padding: 0 0.5em;
+  padding: 0 1em 0 0.5em;
   max-width: 600px;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-gap: 1rem;
-  font-size: 0.9em;
-  
+  font-size: 1em;
 }
 
 .vision__header, 
@@ -170,10 +177,11 @@ body {
   margin: 0;
   margin-top: 0.2em;
   padding: 0;
-  padding-right: 0.25rem;
+  padding-right: 0.25em;
   border-right: 1px solid var(--red);
 }
 
+/* Past work  */
 .past-work__header {
   margin-top: 0.33em;
 }
@@ -181,19 +189,20 @@ body {
 .vision__text, 
 .about__text ,
 .past-work__text {
-  margin: 0;
+  margin-top: .5em;
   padding: 0;
 }
 
+/* About me */
 .about {
   grid-area: about;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-gap: 1rem;
   margin: 0 auto 2em auto;
-  padding: 0 0.5em;
+  padding: 0 1em 0 0.5em;
   max-width: 600px;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .past-work {
@@ -202,7 +211,7 @@ body {
   grid-template-columns: repeat(2, auto);
   grid-gap: 1rem;
   margin: 0 auto 2em auto;
-  padding: 0 0.5em;
+  padding: 0 1em 0 0.5em;
   max-width: 600px;
 }
 
@@ -212,6 +221,7 @@ body {
 
 .past-work__item {
   grid-column: 2 / 3;
+  margin-top: 0.5em;
 }
 
 .past-work__item .item__header {
@@ -230,16 +240,7 @@ body {
 
 .past-work__item .item__text {
   margin: 0;
-  font-size: 0.85em;
-}
-
-.past-work__item a {
-  text-decoration: none;
-  color: var(--red);
-  display: inline;
-  margin: 0;
-  padding: 0;
-  font-size: 0.85em;
+  font-size: 1em;
 }
 
 .past-work__item img {
@@ -248,9 +249,39 @@ body {
   height: 150px;
 }
 
+.past-work__item button {
+  border: none;
+  background: transparent;
+  color: var(--red);
+  font-size: 1em;
+  padding: 0;
+}
+
+.past-work__item button:focus {
+  outline: 0;
+}
+
+.past-work__item .item__extra-details {
+  transform: rotateX(90deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  max-height: 0
+}
+
+.past-work__item .item__extra-details .item__text{
+  margin-bottom: 1em;
+}
+
+.past-work__item .item__extra-details.reveal {
+  transform: rotateX(0);
+  max-height: 500px;
+  margin-top: 1em;
+}
+
+/*  FOOTER  */
 .footer {
   grid-area: footer;
-  margin: 0.5rem 0.5rem 0 0.5rem;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -271,6 +302,6 @@ body {
   color: var(--black);
 }
 
-@media screen and (min-width: 640px) {
+/* @media screen and (min-width: 640px) {
 
-}
+} */
