@@ -125,27 +125,22 @@ Mobile-first design with single column
 /* Showcase movie title */
 .movie {
   grid-area: movie;
-  margin: 0;
-  padding: 0;
 }
 
 .movie__title {
   text-align: center;
-  margin: 0 auto;
-  padding: 0;
+  margin: 0.25em auto 0 auto;
   font-size: 3em;
   color: var(--red);
-  /* border: 1px solid red; */
 }
 
 .sundance {
   grid-area: sundance;
-  padding: 0;
 }
 
 .sundance__text {
   margin: 0 auto 1em auto;
-  font-size: 1.45em;
+  font-size: 1.35em;
   text-align: center;
   color: var(--red);
 }
@@ -165,7 +160,6 @@ Mobile-first design with single column
   grid-template-columns: repeat(2, auto);
   grid-gap: 1rem;
   font-size: 1em;
-  line-height: 1.5em;
 }
 
 .vision__header, 
@@ -174,21 +168,19 @@ Mobile-first design with single column
   writing-mode: vertical-rl;
   text-orientation: upright;
   text-transform: uppercase;
-  margin: 0;
-  margin-top: 0.2em;
-  padding: 0;
-  padding-right: 0.25em;
+  margin: 0.2em 0 0 0;
+  padding: 0 0.5em 0 0;
   border-right: 1px solid var(--red);
 }
 
 /* Past work  */
 .past-work__header {
-  margin-top: 0.33em;
+  /* margin-top: 0.33em; */
 }
 
 .vision__text, 
 .about__text ,
-.past-work__text {
+.past-work__item .item__text {
   margin-top: .5em;
   padding: 0;
   line-height: 1.5em;
