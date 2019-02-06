@@ -130,7 +130,7 @@ Mobile-first design with single column
 .movie__title {
   text-align: center;
   margin: 0.25em auto 0 auto;
-  font-size: 3em;
+  font-size: 3.25em;
   color: var(--red);
 }
 
@@ -139,16 +139,33 @@ Mobile-first design with single column
 }
 
 .sundance__text {
-  margin: 0 auto 1em auto;
+  margin: 0 auto;
+  font-size: 1.42em;
+  text-align: center;
+  color: var(--red);
+  padding-bottom: 1em;
+}
+
+
+.sundance__text a {
+  color: var(--red);
+  text-decoration-color: var(--red);
+}
+
+/* .sundance__link {
+  margin: 0 auto;
+  padding: 0.5em 0 1.5em 0;
   font-size: 1.35em;
   text-align: center;
   color: var(--red);
-}
+  display: block;
+  text-decoration-style: dotted;
+} */
 
-.sundance__text .strong {
+/* .sundance__text .strong {
   font-weight: bold;
   text-transform: uppercase;
-}
+} */
 
 /* Artist vision */
 .vision {
@@ -168,7 +185,7 @@ Mobile-first design with single column
   writing-mode: vertical-rl;
   text-orientation: upright;
   text-transform: uppercase;
-  margin: 0.2em 0 0 0;
+  margin: 0;
   padding: 0 0.5em 0 0;
   border-right: 1px solid var(--red);
 }
@@ -181,8 +198,6 @@ Mobile-first design with single column
 .vision__text, 
 .about__text ,
 .past-work__item .item__text {
-  margin-top: .5em;
-  padding: 0;
   line-height: 1.5em;
 }
 
@@ -214,26 +229,25 @@ Mobile-first design with single column
 
 .past-work__item {
   grid-column: 2 / 3;
-  margin-top: 0.5em;
+  padding-bottom: 1em;
 }
 
 .past-work__item .item__header {
-  margin: 0;
   font-size: 1.5em;
   color: var(--red);
 }
 
 .past-work__item .item__specs {
-  margin: 0;
+  padding: 0.5em 0;
 }
 
-.past-work__item .item__image {
-  margin: 0;
-}
+/* .past-work__item .item__image {
+  padding-bottom: 0.5em;
+} */
 
 .past-work__item .item__text {
-  margin: 0;
-  font-size: 1em;
+  font-size: 0.9em;
+  padding: 0.5em 0;
 }
 
 .past-work__item img {
@@ -261,14 +275,14 @@ Mobile-first design with single column
   max-height: 0
 }
 
-.past-work__item .item__extra-details .item__text{
-  margin-bottom: 1em;
-}
+/* .past-work__item .item__extra-details .item__text{
+  margin-bottom: 0.5em;
+} */
 
 .past-work__item .item__extra-details.reveal {
   transform: rotateX(0);
   max-height: 500px;
-  margin-top: 1em;
+  /* margin-top: 1em; */
 }
 
 /*  FOOTER  */
@@ -280,19 +294,28 @@ Mobile-first design with single column
 
 .footer .email {
   display: block;
-  text-decoration: none;
-  color: var(--red);
-}
-
-.footer i {
-  color: var(--red);
-  font-size: 1.5em;
-  margin: 0.25em;
-}
-
-.footer p.signature a {
-  text-decoration-style: dotted;
+  padding-bottom: 1em;
+  text-decoration-style: solid;
   color: var(--black);
+}
+
+.footer .key {
+  color: var(--black);
+  padding-bottom: 0.5em;
+  font-size: 0.9em;
+}
+
+.footer .key_link {
+  font-size: 0.9em;
+  color: var(--black);
+}
+
+.footer p.signature {
+  padding-top: 1em;
+}
+
+.footer p.signature, .footer p.signature a {
+  color: var(--red);
 }
 
 /* @media screen and (min-width: 640px) {
