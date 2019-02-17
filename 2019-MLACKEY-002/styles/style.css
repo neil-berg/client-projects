@@ -68,7 +68,7 @@ Mobile-first design with single column
 /* Big red hero space in landing */
 .hero {
   background: var(--red);
-  margin-bottom: 10px;
+  margin: 10px 10px 10px 0;
 }
 
 .nav {
