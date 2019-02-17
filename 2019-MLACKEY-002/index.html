@@ -1,112 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Meredith Lackey</title>
-  <link rel="stylesheet" href="styles/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/reset.css">
-</head>
-<body>
-  
-  <div class="wrapper">
-
-    <section class="landing">
-      <div class="landing__gallery">
-        <img src="images/cablestreet_sq_1.jpg" alt="" class="landing__image">
-        <img src="images/cablestreet_sq_2.jpg" alt="" class="landing__image">
-        <img src="images/cablestreet_sq_3.jpg" alt="" class="landing__image">
-        <img src="images/cablestreet_sq_4.jpg" alt="" class="landing__image">
-        <img src="images/cablestreet_sq_5.jpg" alt="" class="landing__image">
-        <img src="images/cablestreet_sq_6.jpg" alt="" class="landing__image">
-        <!-- <img src="images/cablestreet_sq_7.jpg" alt="" class="landing__image">
-        <img src="images/cablestreet_sq_8.jpg" alt="" class="landing__image"> -->
-      </div>
-      <div class="landing__hero">
-        <p class="first-name">MEREDITH</p>
-        <p class="last-name">LACKEY</p>
-        <p class="chinese-1">电影制片人</p>
-        <p class="chinese-2">超级明星</p>
-        <p class="chinese-3">学院奖​​得主</p>
-        <p class="chinese-4">涂料鞋</p>
-        <p class="chinese-5">去的地方真的很远</p>
-      </div>
-    </section>
-
-    <section class="movie">
-      <p class="movie__title">CABLESTREET</p>
-    </section>
-
-    <section class="sundance">
-      <!-- <p class="sundance__text"><span class="strong">Sundance</span> Film Festival <span class="strong">2019</span></p> -->
-      <p class="sundance__text">Sundance 2019 | <a href="#">View Trailer</a></p>
-      <!-- <a class="sundance__link" href="#">View Trailer</a> -->
-    </section>
-
-    <section class="vision">
-      <h2 class="vision__header">Vision</h2>
-      <p class="vision__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, ducimus provident adipisci quasi praesentium numquam molestias quidem expedita distinctio eius. Dolores officiis eveniet odit nesciunt architecto tenetur voluptates.<br><br>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, repellendus repudiandae placeat iure sunt sequi fugit inventore voluptatem dolores voluptate velit molestias, voluptates tenetur rerum accusamus consequuntur officia itaque ratione.
-      </p>
-    </section>
-
-    <section class="about">
-      <h2 class="about__header">About</h2>
-      <p class="about__text">Meredith Lackey is an artist and filmmaker based in Los Angeles. She received a BA in Philosophy and Film/Video from Hampshire College in Amherst, Massachusetts, and an MFA in Moving Image from the University of Illinois Chicago. Her work has shown in exhibitions and film festivals including the New York Film Festival at Lincoln Center, FID Marseille, Ann Arbor Film Festival, and the Edinburgh International Film Festival. She was a 2013-2015 University Fellow of the University of Illinois Chicago, is the recipient of the UFVA Carole Fielding Grant, and is a 2014 Princess Grace Foundation Honoraria winner.</p>
-    </section>
-
-    <section class="past-work">
-      <h2 class="past-work__header">Work</h2>
-      <div class="past-work__item">
-        <p class="item__header">Cable Street</p>
-        <p class="item__specs">58’ / 4K video / stereo</p>
-        <img class="item__image" src="images/cablestreet_sq_5.jpg" alt="">
-        <p class="item__text">Cable Street follows the planning, manufacturing, and installation of a submarine fiber optic cable. Spanning the course of two years, and diverse geographies includinng Germany, China, Cambodia, and the Gulf of Thailand, Cable Street renders the materiality of a network.</p>
-        <div class="item__extra-details">
-          <p class="item__text">Cable Street follows the planning, manufacturing, and installation of a submarine fiber optic cable. Spanning the course of two years, and diverse geographies includinng Germany, China, Cambodia, and the Gulf of Thailand, Cable Street renders the materiality of a network.</p>
-          <img class="item__image" src="images/cablestreet_sq_5.jpg" alt="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Meredith Lackey</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/reset.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="landing">
+        <div class="gallery"></div>
+        <div class="hero">
+          <ul class="nav">
+            <li class="nav__item">
+              <a href="#about">About</a>
+            </li>
+            <li class="nav__item">
+              <a
+                target="_blank"
+                href="https://docs.google.com/document/d/1PWMVh_6k7cWns2dFgNkbXrWiVdN7s04vEBxVlfxpu9c/edit?usp=sharing"
+                >Notes
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#work">Work</a>
+            </li>
+          </ul>
         </div>
-        <button class="item__more">Read more <i class="fas fa-angle-double-right"></i></button>
-      </div>
-      <div class="past-work__item">
-        <p class="item__header">Operação Lava Jato</p>
-        <p class="item__specs">58’ / 4K video / stereo</p>
-        <img class="item__image" src="images/cablestreet_sq_5.jpg" alt="">
-        <p class="item__text">Operação Lava Jato was a corruption and money laundering scandal that engulfed Brazilian politics in the Spring of 2016. Although the Federal Police have evidence showing the involvement of virtually every political party, The Brazilian Democratic Movement Party used the scandal to remove the incumbent Labor Party, including then President Dilma Rousseff, from power.</p>
-        <div class="item__extra-details">
-          <p class="item__text">Operação Lava Jato translates to Operation Car Wash, referring to the currency exchange and money transfer service at the Posto da Torre (Tower Gas Station) in Brasília that ring of money changers used to to move funds acquired by illicit means.</p>
-          <p class="item__text">Operação Lava Jato articulates a complex political situation through the voices of ordinary people by asking local car wash workers, what's the difference between laundering money and washing cars?</p>
-          <img class="item__image" src="images/cablestreet_sq_5.jpg" alt="">
-        </div>
-        <button class="item__more">Read more <i class="fas fa-angle-double-right"></i></button>
-      </div>
-      <div class="past-work__item">
-        <p class="item__header">Convention</p>
-        <p class="item__specs">7’ / Super16 to HD / color / sound</p>
-        <img class="item__image" src="images/cablestreet_sq_5.jpg" alt="">
-        <p class="item__text">Shot in the crowd of protestors at the Republican National Convention that nominated 45 for presidential candidate, Convention shows the clash of right wing pundits, the Westboro Baptists, open-carry advocates, local activists and ANTIFA in Cleveland, Ohio in July, 2016.</p>
-        <div class="item__extra-details">
-          <p class="item__text">Shot in the crowd of protestors at the Republican National Convention that nominated 45 for presidential candidate, Convention shows the clash of right wing pundits, the Westboro Baptists, open-carry advocates, local activists and ANTIFA in Cleveland, Ohio in July, 2016.</p>
-          <img class="item__image" src="images/cablestreet_sq_5.jpg" alt="">
-        </div>
-        <button class="item__more">Read more <i class="fas fa-angle-double-right"></i></button>
-      </div>
-    </section>
+      </section>
 
-    <footer class="footer">
-      <a class="email" href="mailto:mhelenelackey@gmail.com>">Email Meredith Lackey</a>
-      <p class="key">PGP Public Key and Fingerprint</p>
-      <p class="key">D745 45C1 9117 640A BE2B A754 C3EB D3AF AB87 3A70</p>
-      <a class="key_link" href="#">Meredith Lackey's Public Key</a>
-      <p class="signature">site by 
-        <a href="https://neil-berg.com" target="_blank">neil berg</a>
-      </p>
-    </footer>
+      <section class="movie">
+        <p class="movie__title">
+          <a target="_blank" href="https://vimeo.com/182922960"
+            >Cablestreet 电缆街</a
+          >
+        </p>
+      </section>
 
-  </div>
-  <script src="scripts/script.js"></script>
-</body>
+      <section id="about" class="about">
+        <h2 class="about__header">About</h2>
+        <p class="about__text">
+          Meredith Lackey is an artist and filmmaker based in Los Angeles. She
+          received a BA in Philosophy and Film/Video from Hampshire College in
+          Amherst, Massachusetts, and an MFA in Moving Image from the University
+          of Illinois Chicago. Her work has shown in exhibitions and film
+          festivals including the New York Film Festival at Lincoln Center, FID
+          Marseille, Ann Arbor Film Festival, and the Edinburgh International
+          Film Festival. She was a 2013-2015 University Fellow of the University
+          of Illinois Chicago, is the recipient of the UFVA Carole Fielding
+          Grant, and is a 2014 Princess Grace Foundation Honoraria winner.
+        </p>
+      </section>
+
+      <section id="work" class="work">
+        <h2 class="work__header">Work</h2>
+        <div class="work__item">
+          <p class="item__header">Cablestreet</p>
+          <p class="item__specs">2019 / 58’ / 4K video / stereo</p>
+          <img class="item__image" src="images/cablestreet_sq_5.jpg" alt="" />
+          <p class="item__text">
+            Cable Street follows the planning, manufacturing, and installation
+            of a submarine fiber optic cable. Spanning the course of two years,
+            and diverse geographies includinng Germany, China, Cambodia, and the
+            Gulf of Thailand, Cable Street renders the materiality of a network.
+          </p>
+          <div class="item__extra-details">
+            <p class="item__text">
+              Cable Street follows the planning, manufacturing, and installation
+              of a submarine fiber optic cable. Spanning the course of two
+              years, and diverse geographies includinng Germany, China,
+              Cambodia, and the Gulf of Thailand, Cable Street renders the
+              materiality of a network.
+            </p>
+          </div>
+          <i class="fas fa-angle-double-right"></i>
+        </div>
+        <div class="work__item">
+          <p class="item__header">Operação Lava Jato</p>
+          <p class="item__specs">2019 / 58’ / 4K video / stereo</p>
+          <img class="item__image" src="images/cablestreet_sq_5.jpg" alt="" />
+          <p class="item__text">
+            Operação Lava Jato was a corruption and money laundering scandal
+            that engulfed Brazilian politics in the Spring of 2016. Although the
+            Federal Police have evidence showing the involvement of virtually
+            every political party, The Brazilian Democratic Movement Party used
+            the scandal to remove the incumbent Labor Party, including then
+            President Dilma Rousseff, from power.
+          </p>
+          <div class="item__extra-details">
+            <p class="item__text">
+              Operação Lava Jato translates to Operation Car Wash, referring to
+              the currency exchange and money transfer service at the Posto da
+              Torre (Tower Gas Station) in Brasília that ring of money changers
+              used to to move funds acquired by illicit means.
+            </p>
+            <p class="item__text">
+              Operação Lava Jato articulates a complex political situation
+              through the voices of ordinary people by asking local car wash
+              workers, what's the difference between laundering money and
+              washing cars?
+            </p>
+          </div>
+          <i class="fas fa-angle-double-right"></i>
+        </div>
+        <div class="work__item">
+          <p class="item__header">Convention</p>
+          <p class="item__specs">2019 / 7’ / Super16 to HD / color / sound</p>
+          <img class="item__image" src="images/cablestreet_sq_5.jpg" alt="" />
+          <p class="item__text">
+            Shot in the crowd of protestors at the Republican National
+            Convention that nominated 45 for presidential candidate, Convention
+            shows the clash of right wing pundits, the Westboro Baptists,
+            open-carry advocates, local activists and ANTIFA in Cleveland, Ohio
+            in July, 2016.
+          </p>
+          <div class="item__extra-details">
+            <p class="item__text">
+              Shot in the crowd of protestors at the Republican National
+              Convention that nominated 45 for presidential candidate,
+              Convention shows the clash of right wing pundits, the Westboro
+              Baptists, open-carry advocates, local activists and ANTIFA in
+              Cleveland, Ohio in July, 2016.
+            </p>
+          </div>
+          <i class="fas fa-angle-double-right"></i>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <a class="email" href="mailto:mhelenelackey@gmail.com>"
+          >Email Meredith Lackey</a
+        >
+        <p class="key">PGP Public Key and Fingerprint</p>
+        <p class="key">D745 45C1 9117 640A BE2B A754 C3EB D3AF AB87 3A70</p>
+        <a
+          class="key_link"
+          href="/assets/Meredith-Lackey-AB873A70–Public.asc"
+          download
+          >Meredith Lackey's Public Key</a
+        >
+        <p class="signature">
+          site by
+          <a href="https://neil-berg.com" target="_blank">neil berg</a>
+        </p>
+      </footer>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
 </html>
