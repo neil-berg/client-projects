@@ -8,7 +8,6 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  scroll-behavior: smooth;
 }
 
 *,
@@ -23,10 +22,6 @@ body {
   background: var(--white);
 }
 
-/* 
-Overall site wrapper 
-Mobile-first design with single column
-*/
 .wrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -91,14 +86,17 @@ Mobile-first design with single column
   color: var(--white);
 }
 
-/* Showcase movie title */
 .movie {
   grid-area: movie;
+  margin: 0;
+  padding: 0;
+  top: 10px;
 }
 
 .movie__title {
   text-align: center;
   margin: 0 auto;
+  padding-top: 0.5em;
   font-size: 1.85em;
   text-transform: uppercase;
   letter-spacing: 0.035em;
@@ -128,7 +126,6 @@ Mobile-first design with single column
   line-height: 1.5em;
 }
 
-/* About me */
 .about {
   grid-area: about;
   display: grid;
@@ -158,6 +155,10 @@ Mobile-first design with single column
   grid-column: 2 / 3;
   padding-bottom: 1em;
 }
+.work__item:last-child {
+  grid-column: 2 / 3;
+  padding-bottom: 0;
+}
 
 .work__item .item__header {
   font-size: 1.5em;
@@ -169,14 +170,14 @@ Mobile-first design with single column
 }
 
 .work__item .item__text {
-  font-size: 0.9em;
+  font-size: 1em;
   padding: 0.5em 0;
 }
 
 .work__item img {
   width: 100%;
-  max-width: 250px;
-  height: 150px;
+  max-width: 600px;
+  height: auto;
 }
 
 .work__item i {
@@ -194,10 +195,16 @@ Mobile-first design with single column
 .work__item .item__extra-details.reveal {
   transform: rotateX(0);
   max-height: 500px;
-  /* margin-top: 1em; */
 }
 
-/*  FOOTER  */
+.work__item .item__extra-details .item__text .item__text-link {
+  text-decoration: none;
+  color: var(--red);
+}
+.work__item .item__extra-details .item__text .item__text-link:hover {
+  color: var(--black);
+}
+
 .footer {
   grid-area: footer;
   margin: 0 auto;
@@ -245,7 +252,3 @@ Mobile-first design with single column
 .footer p.signature a:hover {
   color: var(--red);
 }
-
-/* @media screen and (min-width: 640px) {
-
-} */

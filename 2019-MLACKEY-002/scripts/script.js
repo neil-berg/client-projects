@@ -1,5 +1,4 @@
-// Event listeners on past work buttons to reveal more text
-const pastWorkSection = document.querySelector('.work');
+// Functions to handle event listeners
 
 function revealText(e) {
   if (e.target.classList.contains('fas')) {
@@ -25,16 +24,21 @@ function createGallery(e) {
 
   gallery.innerHTML = Array(numBoxes)
     .fill()
-    .map(item => {
+    .map((item, i) => {
       return `
-      <img src="images/cablestreet_sq_${Math.floor(Math.random() * 6 + 1)}.jpg" 
-          alt="" 
+      <img src="images/gallery_${i + 1}.png" 
+          alt="still image from Cablestreet" 
           class="gallery__image" 
       />`;
     })
     .join('');
 }
 
+const pastWorkSection = document.querySelector('.work');
+
+// Event listeners to dynamically create the image gallery
 window.addEventListener('DOMContentLoaded', createGallery);
 window.addEventListener('resize', createGallery);
+
+// Event listeners on past work buttons to reveal more text
 pastWorkSection.addEventListener('click', revealText);
