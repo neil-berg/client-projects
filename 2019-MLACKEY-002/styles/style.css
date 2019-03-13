@@ -80,6 +80,7 @@ body {
 .nav .nav__item a {
   text-decoration: none;
   color: var(--black);
+  transition: all 0.3s;
 }
 
 .nav .nav__item a:hover {
@@ -104,6 +105,7 @@ body {
 .movie__title a {
   text-decoration: none;
   color: var(--red);
+  transition: all 0.3s;
 }
 
 .movie__title a:hover {
@@ -216,6 +218,7 @@ body {
   padding-bottom: 2em;
   text-decoration: none;
   color: var(--red);
+  transition: all 0.3s;
 }
 
 .footer .email:hover {
@@ -232,6 +235,7 @@ body {
   font-size: 1em;
   color: var(--red);
   text-decoration: none;
+  transition: all 0.3s;
 }
 
 .footer .key_link:hover {
@@ -246,6 +250,7 @@ body {
 .footer p.signature a {
   text-decoration: none;
   color: var(--black);
+  transition: all 0.3s;
 }
 
 .footer p.signature a:hover {
