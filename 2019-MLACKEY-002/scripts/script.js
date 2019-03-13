@@ -1,5 +1,4 @@
 // Functions to handle event listeners
-
 function revealText(e) {
   if (e.target.classList.contains('fas')) {
     // Show the information in the div above targeted icon
@@ -17,16 +16,21 @@ function revealText(e) {
 }
 
 // Determine number of thumbnails based on viewport height
+// We have 15 unique thumbnails, so if the viewport height
+// requires > 15 thumbnails, we'll just select a random
+// thumbnail within 1-15 for indices 16 and above.
 function createGallery(e) {
   const height = window.innerHeight;
-  const numBoxes = Math.floor(height / 80) - 1;
+  const numBoxes = Math.floor(height / 80) - 2;
   const gallery = document.querySelector('.gallery');
 
   gallery.innerHTML = Array(numBoxes)
     .fill()
     .map((item, i) => {
       return `
-      <img src="images/gallery_${i + 1}.png" 
+      <img src="images/gallery_${
+        i < 14 ? i + 1 : Math.floor(Math.random() * 15 + 1)
+      }.png" 
           alt="still image from Cablestreet" 
           class="gallery__image" 
       />`;
