@@ -20,13 +20,26 @@ function revealText(e) {
 // requires > 15 thumbnails, we'll just select a random
 // thumbnail within 1-15 for indices 16 and above.
 function createGallery(e) {
-  const height = window.innerHeight;
-  const numBoxes = Math.floor(height / 80) - 2;
+  let size; // image size in pixels
+  const windowWidth = window.innerWidth;
+  if (windowWidth < 450) {
+    size = 90;
+  } else {
+    size = 120;
+  }
+  const windowHeight = window.innerHeight;
+  const possibleBoxes = Math.floor(windowHeight / size);
+  // Account for 10px margin top for each box
+  // + 10px margin bottom for the last image
+  const totalMargin = possibleBoxes * 10 + 10;
+  const boxesToRemove = Math.ceil(totalMargin / size);
+  const totalBoxes = possibleBoxes - boxesToRemove;
+
   const gallery = document.querySelector('.gallery');
 
-  gallery.innerHTML = Array(numBoxes)
+  gallery.innerHTML = Array(totalBoxes)
     .fill()
-    .map((item, i) => {
+    .map((_, i) => {
       return `
       <img src="images/gallery_${
         i < 14 ? i + 1 : Math.floor(Math.random() * 15 + 1)

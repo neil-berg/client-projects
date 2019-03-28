@@ -37,7 +37,7 @@ body {
 .landing {
   grid-area: landing;
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 110px 1fr;
   height: 100vh;
 }
 
@@ -49,7 +49,8 @@ body {
 }
 
 .gallery__image {
-  width: 80px;
+  /* width: 80px; */
+  width: 90px;
   filter: grayscale(100%);
   background: var(--black);
   padding: 0;
@@ -255,4 +256,15 @@ body {
 
 .footer p.signature a:hover {
   color: var(--red);
+}
+
+/* Increase image size on larger screens */
+@media (min-width: 450px) {
+  .landing {
+    grid-template-columns: 140px 1fr;
+  }
+
+  .gallery__image {
+    width: 120px;
+  }
 }
